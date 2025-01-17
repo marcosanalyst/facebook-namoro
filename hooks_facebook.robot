@@ -6,6 +6,9 @@ Library    DateTime
 Library    String
 Resource        routes.robot
 
+*** Variables ***
+${TOTAL_CREDITOS}   100
+
 *** Keywords ***
 
 Abrir aplicativo facebook

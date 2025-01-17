@@ -8,20 +8,9 @@ Test Teardown         Fechar aplicativo facebook
 *** Test Cases ***
 caso de teste like em geral
     # Dado que abro o aplicativo
-    # Quando clico no icone coracao
-    Sleep   3
-    ${x}=  Set Variable    420
-    ${y}=  Set Variable    185
+    E clico no icone coracao do menu superior
+    E clico fechar bunner
+    E clico no botao curtir
+    Entao continuo curtindo ate acabar os creditos
 
-    Click A Point   ${x}   ${y}
-
-    # fechar bunner
-    Run Keyword And Ignore Error    Click Element    locator
-    
-    Sleep    3
-    # Entao dou like
-    Wait Until Element Is Visible    ${btn_curtir}
-    Click Element    ${btn_curtir}
-
-    Sleep    5
 
