@@ -1,0 +1,17 @@
+# Arquivos do virtualenv
+venv/
+env/
+
+# Byte-compiled / compiled files
+__pycache__/
+*.pyc
+*.pyo/
+*.pyd/
+
+# Arquivos de configuração
+*.ini
+*.cfg
+
+# Arquivos do Robot Framework
+output.xml
+log.html
