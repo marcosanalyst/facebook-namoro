@@ -16,14 +16,14 @@ E clico no icone coracao do menu superior
     Click A Point   ${x}   ${y}
 
 E clico fechar bunner
-    Sleep   2
+    Sleep   1
     ${x2}=  Set Variable    355
     ${y2}=  Set Variable    1150
 
     Run Keyword And Ignore Error    Click A Point   ${x2}   ${y2}
 
 E clico no botao curtir
-    Sleep    2
+    Sleep    1
     Wait Until Element Is Visible    ${btn_curtir}  timeout=10s
     Click Element    ${btn_curtir}
 
@@ -38,3 +38,7 @@ Entao continuo curtindo ate acabar os creditos
         ${creditos_restantes}=    Evaluate    ${creditos_restantes} - 1
         Log To Console    ${creditos_restantes}
     END
+
+Dado que estou na tela de matches
+    E clico no icone coracao do menu superior
+    E clico fechar bunner
