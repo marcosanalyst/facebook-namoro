@@ -9,8 +9,10 @@ Test Teardown         Fechar aplicativo facebook
 
 caso de teste enviar mensagem
     Dado que estou na tela de matches
-    # E clico em matches
-    Wait Until Element Is Visible    ${btn_matches}
-    Click Element    ${btn_matches}
-    Sleep    time_=5s
-
+    E clico em matches
+    E clico no primeiro match
+    E clico no campo de digitar mensagem
+    E digito uma frase aleatoria
+    E clico enviar mensagem
+    E clico em voltar
+    Entao continuo enviando mensagem ate acabar os matches

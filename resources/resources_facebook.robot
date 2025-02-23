@@ -42,3 +42,30 @@ Entao continuo curtindo ate acabar os creditos
 Dado que estou na tela de matches
     E clico no icone coracao do menu superior
     E clico fechar bunner
+
+E clico em matches
+    Wait Until Element Is Visible    ${btn_matches}
+    Click Element    ${btn_matches}
+
+E clico no primeiro match
+    Sleep    time_=3s
+    Click Element At Coordinates    79    361
+
+E clico no campo de digitar mensagem
+    Wait Until Element Is Visible    ${btn_input_mensagem}
+    Click Element    ${btn_input_mensagem}
+
+E digito uma frase aleatoria
+    ${mensagem}=      Obter mensagem aleatoria
+    Input Text    ${btn_input_mensagem}    ${mensagem}
+
+E clico enviar mensagem
+    Wait Until Element Is Visible    ${btn_enviar_mensagem}
+    Click Element    ${btn_enviar_mensagem}
+
+E clico em voltar
+    Wait Until Element Is Visible    ${btn_voltar}
+    Click Element    ${btn_voltar}
+
+Entao continuo enviando mensagem ate acabar os matches
+
