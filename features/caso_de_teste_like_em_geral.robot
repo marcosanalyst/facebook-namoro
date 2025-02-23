@@ -7,8 +7,7 @@ Test Teardown         Fechar aplicativo facebook
 
 *** Test Cases ***
 caso de teste like em geral
-    # Dado que abro o aplicativo
-    E clico no icone coracao do menu superior
+    Dado que clico no icone coracao do menu superior
     E clico fechar bunner
     E clico no botao curtir
     Entao continuo curtindo ate acabar os creditos

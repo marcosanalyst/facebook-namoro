@@ -8,7 +8,7 @@ Resource    ../routes.robot
 
 *** Keywords ***
 
-E clico no icone coracao do menu superior
+Dado que clico no icone coracao do menu superior
     Sleep   2
     ${x}=  Set Variable    420
     ${y}=  Set Variable    185
@@ -40,7 +40,7 @@ Entao continuo curtindo ate acabar os creditos
     END
 
 Dado que estou na tela de matches
-    E clico no icone coracao do menu superior
+    Dado que clico no icone coracao do menu superior
     E clico fechar bunner
 
 E clico em matches
@@ -48,7 +48,7 @@ E clico em matches
     Click Element    ${btn_matches}
 
 E clico no primeiro match
-    Sleep    time_=3s
+    Sleep    3
     Click Element At Coordinates    79    361
 
 E clico no campo de digitar mensagem
@@ -66,6 +66,28 @@ E clico enviar mensagem
 E clico em voltar
     Wait Until Element Is Visible    ${btn_voltar}
     Click Element    ${btn_voltar}
+    Sleep    2
+    Click Element    ${btn_voltar}
+    Sleep    3
+    Click Element    ${btn_matches}
+    Sleep    1
 
 Entao continuo enviando mensagem ate acabar os matches
+    Sleep    3
+    WHILE    True
+        E clico no primeiro match
+        E clico no campo de digitar mensagem
+
+        # Valida se o campo de input ainda está visível
+        ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible    ${btn_input_mensagem}
+
+        IF    ${elemento_existe} == False
+            BREAK
+        END
+        E digito uma frase aleatoria
+        E clico enviar mensagem
+        E clico em voltar
+        Sleep    3
+    END
+
 

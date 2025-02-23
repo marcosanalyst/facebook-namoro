@@ -15,7 +15,7 @@ A automação tem como objetivo interagir com o **Facebook Namoro** e gerenciar 
 2. **Curtir Perfis Automaticamente**:
    - Curte perfis com base no número de créditos configurado em uma variável.
 
-3. **Enviar Mensagens aos Matches** *(Sugestão de Nova Funcionalidade)*:
+3. **Enviar Mensagens aos Matches**:
    - Percorre todos os matches encontrados na seção de chat.
    - Seleciona uma frase aleatória de uma lista pré-definida contendo mais de **100 frases** comuns para início de conversa.
    - Envia a frase para cada match.
